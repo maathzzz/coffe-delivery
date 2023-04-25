@@ -1,11 +1,15 @@
-import { Header } from '../../components/Header'
-import './styles.css'
+import styles from './Home.module.css'
+import coffeHome from '../../assets/coffeHome.png'
 
 export function Home() {
     return (
-        <div>
-            <Header />
-            <h1> Olá mundo</h1>
+        <div className={styles.intro}>
+            <div className={styles.title}>
+                <h1>Encontre o café perfeito para qualquer hora do dia.</h1>
+                <h3>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora.</h3>
+            </div>
+            <img className={styles.imagem} src={coffeHome} alt ="" />
         </div>
+
     )
 }

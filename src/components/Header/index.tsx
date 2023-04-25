@@ -1,6 +1,6 @@
 import CoffeDeliveryLogo from '../../assets/coffeDeliveryLogo.svg'
 import { ShoppingCartSimple, MapPin } from "@phosphor-icons/react";
-import styles from './styles.module.css'
+import styles from './Header.module.css'
 import { NavLink } from 'react-router-dom';
 
 export function Header() {
@@ -11,7 +11,7 @@ export function Header() {
             </NavLink>
             <div className={styles.actions}>
                 <div className={styles['actions-local']}>
-                    <MapPin weight="fill" size={16}/>
+                    <MapPin color="#8047F8" weight="fill" size={16}/>
                     <span> Jaú </span>
                     <span> • </span>
                     <span> SP</span>

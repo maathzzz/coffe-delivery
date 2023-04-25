@@ -1,0 +1,46 @@
+.intro {
+    position: relative;
+    height: 34rem;
+    left: 0px;
+    right: 0px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1rem;
+
+    position: absolute;
+    width: 36.75rem;
+    height: 12rem;
+
+    left: calc(50% - 36.75rem/2 - 16.625rem);
+    top: calc(50% - 12rem/2 - 5.125rem)
+}
+
+.title h1 {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 62.4px;
+
+    color: var(--black-title);
+}
+
+.title h3 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.imagem {
+    position: absolute;
+    width: 476px;
+    height: 360px;
+    left: calc(50% - 476px/2 + 322px);
+    top: calc(50% - 360px/2);
+
+}
