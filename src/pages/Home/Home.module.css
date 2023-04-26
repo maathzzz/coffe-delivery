@@ -250,7 +250,7 @@
     top: 40.5rem;
 }
 
-.coffeeList h1 {
+.coffeeListTitle {
     position: absolute;
     width: 12.063rem;
     height: 2.625rem;
@@ -266,13 +266,17 @@
     display: flex;
     align-items: center;
 
-    color: var(--gray-title);
+    color: var(--gray-subtitle);
 }
 
 .list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 2rem;
+
     position: absolute;
     width: 70rem;
-    height: 85rem;
+    /* height: 85rem; */
     left: calc(50% - 70rem/2);
     top: 8rem;
 }

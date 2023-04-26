@@ -1,7 +1,10 @@
+import { CoffeeCard } from './CoffeeCard/CoffeeCard'
+
 import styles from './Home.module.css'
 import coffeHome from '../../assets/coffeHome.png'
 import { Coffee, Package, ShoppingCartSimple, Timer } from '@phosphor-icons/react'
 import { coffees } from '../../data/coffee'
+
 
 export function Home() {
     return (
@@ -33,17 +36,21 @@ export function Home() {
             </div>
 
             <div className={styles.coffeeList}>
-                <h1> Nossos cafés</h1>
-                <div>
-                    {/* {coffees.map(coffee => {
+                <h1 className={styles.coffeeListTitle}> Nossos cafés</h1>
+                <div className={styles.list}>
+                    {coffees.map(coffee => {
                         return (
                             <div> 
-                                <p> {coffee.title}</p>
-                                <p> {coffee.amount}</p>
-                                <span> {coffee.tags} </span>
+                                <CoffeeCard
+                                    key={coffee.id}
+                                    title={coffee.title}
+                                    description={coffee.description}
+                                    price={coffee.amount}
+                                    tags={coffee.tags} 
+                                />
                             </div>
                         )
-                    })} */}
+                    })}
                 </div>
             </div>
         </div>

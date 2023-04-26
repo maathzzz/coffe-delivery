@@ -1,0 +1,220 @@
+.coffeeCard {
+    width: 16rem;
+    height: 19.375rem;
+
+    background: var(--white-card);
+    border-radius: 6px 36px;
+}
+
+.coffeeCard img {
+    width: 7.5rem;
+    height: 7.5rem;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    left: calc(50% - 8rem/2);
+    top: -2rem;
+}
+
+.coffeeTags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+}
+
+.coffeeTags span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+
+    width: 3.875rem;
+    height: 1.313rem;
+
+    background: var(--yellow-light);
+    border-radius: 100px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    color: var(--yellow-dark);
+    font-weight: 700;
+    font-size: 0.625rem;
+}
+
+.coffeeName {
+
+    position: relative;
+    top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Baloo 2';
+    font-style: 'normal';
+    font-weight: 700;
+    font-size: 1.25rem;
+
+    line-height: 130%;
+
+    color: var(--gray-subtitle)
+}
+
+.coffeeDescription {
+
+    display: flex;
+    position: relative;
+    top: 1rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 130%;
+
+    text-align: center;
+
+    color: var(--gray-label)
+}
+
+.buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 1.813rem;
+
+    width: 14rem;
+
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.price{
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.4rem;
+
+    color: var(--gray-text)
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.5rem;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 2.375rem;
+    border-radius: 6px;
+    gap: 0.25rem;
+
+    background: var(--gray-button);
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.minus {
+    line-height: 2;
+    font-size: 1.5rem;
+    text-align: center;
+    background: none;
+    border: none;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.minus:hover {
+    color: var(--purple-dark); 
+}
+
+.counter span {
+    width: 20px;
+    height: 21px;
+
+    /* Text/Regular M */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    text-align: center;
+    color: var(--black-title);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.plus {
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.plus:hover {
+    color: var(--purple-dark); 
+}
+
+.cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    background: #4B2995;
+    border-radius: 6px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+.cart:hover {
+    background: var(--purple);
+}
