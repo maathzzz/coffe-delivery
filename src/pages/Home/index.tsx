@@ -1,5 +1,4 @@
 import { CoffeeCard } from './CoffeeCard/CoffeeCard'
-
 import styles from './Home.module.css'
 import coffeHome from '../../assets/coffeHome.png'
 import { Coffee, Package, ShoppingCartSimple, Timer } from '@phosphor-icons/react'
@@ -40,9 +39,8 @@ export function Home() {
                 <div className={styles.list}>
                     {coffees.map(coffee => {
                         return (
-                            <div> 
+                            <div key={coffee.id}> 
                                 <CoffeeCard
-                                    key={coffee.id}
                                     title={coffee.title}
                                     description={coffee.description}
                                     price={coffee.amount}

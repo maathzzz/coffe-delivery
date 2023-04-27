@@ -10,12 +10,13 @@ export function Header() {
                 <img src={CoffeDeliveryLogo} alt="" />
             </NavLink>
             <div className={styles.actions}>
-                <div className={styles['actions-local']}>
+                <NavLink to='/sucess' className={styles['actions-local']}>
                     <MapPin color="#8047F8" weight="fill" size={16}/>
-                    <span> Jaú </span>
+                    {/* <span> Jaú </span>
                     <span> • </span>
-                    <span> SP</span>
-                </div>
+                    <span> SP</span> */}
+                    <span> Meu Pedido</span>
+                </NavLink>
                 <NavLink to="/checkout" className={styles['actions-cart']}> 
                     <ShoppingCartSimple color="#C47F17" weight="fill" size={22}/> 
                 </NavLink>

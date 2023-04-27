@@ -11,14 +11,16 @@ interface CoffeeAtributes {
 
 }
 
+
 export function CoffeeCard({ title, description, price, tags, imgUrl }: CoffeeAtributes) {
+
   return (
     <div className={styles.coffeeCard}>
         <img src={imgUrl}/> 
         <div className={styles.coffeeTags}>
           {tags.map(tag => {
             return (
-              <span> {tag} </span>
+              <span key={Math.random() * 1000}> {tag} </span>
             ) })} 
         </div>
 

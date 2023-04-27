@@ -1,0 +1,159 @@
+.sucess img {
+    position: absolute;
+    width: 30.75rem;
+    height: 18.313rem;
+    left: calc(50% - 30.75rem/2 + 19.625rem);
+    top: 16.75rem;
+}
+
+.title {
+    position: absolute;
+    left: calc(50% - 22.063rem/2 - 23.969rem);
+    top: 10.875rem;
+}
+
+.title h1 { 
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 130%;
+
+    color: var(--yellow-dark);
+}
+
+.title p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 130%;
+
+    color: var(--gray-subtitle);
+    font-stretch: 100;
+}
+
+.orderInfo {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+    gap: 2rem;
+
+    position: absolute;
+    width: 32.875rem;
+    height: 16.875rem;
+
+    left: calc(50% - 34.875rem/2 - 18.563rem);
+    top: 17.5rem;
+
+    border-radius: 6px 36px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(219, 172, 44, 1) rgba(128, 71, 248, 1);
+    /* background: linear-gradient(to bottom left, rgba(219, 172, 44, 1), rgba(128, 71, 248, 1)); */
+}
+
+.local {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.75rem;
+}
+
+.localIcon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--purple);
+    border-radius: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.localText {
+    display: flex;
+    flex-direction: column;
+}
+
+.localText span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1rem;
+
+    color: var(--gray-text);
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.75rem;
+}
+
+.timeIcon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--yellow);
+    border-radius: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeText {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeText p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray-text)
+}
+
+.timeText span {
+    color: var(--gray-text);
+    font-weight: bolder;
+}
+
+.payment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.75rem;
+}
+
+.paymentIcon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--yellow-dark);
+    border-radius: 1000px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paymentText {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentText p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray-text)
+}
+
+.paymentText span {
+    color: var(--gray-text);
+    font-weight: bolder;
+}
