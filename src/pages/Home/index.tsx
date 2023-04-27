@@ -47,6 +47,7 @@ export function Home() {
                                     description={coffee.description}
                                     price={coffee.amount}
                                     tags={coffee.tags} 
+                                    imgUrl={coffee.img}
                                 />
                             </div>
                         )

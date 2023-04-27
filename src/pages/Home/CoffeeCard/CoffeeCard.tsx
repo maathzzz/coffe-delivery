@@ -6,14 +6,15 @@ interface CoffeeAtributes {
   title: string
   description: string
   price: number
-  tags: String[] 
+  tags: String[]
+  imgUrl: string 
 
 }
 
-export function CoffeeCard({ title, description, price, tags }: CoffeeAtributes) {
+export function CoffeeCard({ title, description, price, tags, imgUrl }: CoffeeAtributes) {
   return (
     <div className={styles.coffeeCard}>
-        <img src="../../../../public/havaiano.svg"/> 
+        <img src={imgUrl}/> 
         <div className={styles.coffeeTags}>
           {tags.map(tag => {
             return (

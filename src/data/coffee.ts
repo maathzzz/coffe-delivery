@@ -4,9 +4,9 @@ export const coffees = [
 		title: 'Expresso Tradicional',
 		description: 'O tradicional café feito com água quente e grãos moídos',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/tradicional.png',
 		tags: [
-			'tradicional'
+			'TRADICIONAL'
 		]
 	},
 	{
@@ -14,9 +14,9 @@ export const coffees = [
 		title: 'Expresso Americano',
 		description: 'Expresso diluído, menos intenso que o tradicional',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/americano.png',
 		tags: [
-			'tradicional'
+			'TRADICIONAL'
 		]
 	},
 	{
@@ -24,9 +24,9 @@ export const coffees = [
 		title: 'Expresso Cremoso',
 		description: 'Café expresso tradicional com espuma cremosa',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/cremoso.png',
 		tags: [
-			'tradicional'
+			'TRADICIONAL'
 		]
 	},
 	{
@@ -34,10 +34,10 @@ export const coffees = [
 		title: 'Expresso Gelado',
 		description: 'Bebida preparada com café expresso e cubos de gelo',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/gelado.png',
 		tags: [
-			'tradicional',
-			'gelado'
+			'TRADICIONAL',
+			'GELADO'
 		]
 	},
 	{
@@ -45,10 +45,10 @@ export const coffees = [
 		title: 'Café com Leite',
 		description: 'Meio a meio de expresso tradicional com leite vaporizado',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/leite.png',
 		tags: [
-			'tradicional',
-			'com leite'
+			'TRADICIONAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -56,10 +56,10 @@ export const coffees = [
 		title: 'Latte',
 		description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/latte.png',
 		tags: [
-			'tradicional',
-			'com leite'
+			'TRADICIONAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -67,10 +67,10 @@ export const coffees = [
 		title: 'Capuccino',
 		description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/capuccino.png',
 		tags: [
-			'tradicional',
-			'com leite'
+			'TRADICIONAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -78,10 +78,10 @@ export const coffees = [
 		title: 'Macchiato',
 		description: 'Café expresso misturado com um pouco de leite quente e espuma',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/macchiato.png',
 		tags: [
-			'tradicional',
-			'com leite'
+			'TRADICIONAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -89,10 +89,10 @@ export const coffees = [
 		title: 'Mocaccino',
 		description: 'Café expresso com calda de chocolate, pouco leite e espuma',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/mocaccino.png',
 		tags: [
-			'tradicional',
-			'com leite'
+			'TRADICIONAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -100,10 +100,10 @@ export const coffees = [
 		title: 'Chocolate Quente',
 		description: 'Bebida feita com chocolate dissolvido no leite quente e café',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/quente.png',
 		tags: [
-			'especial',
-			'com leite'
+			'ESPECIAL',
+			'COM LEITE'
 		]
 	},
 	{
@@ -111,11 +111,11 @@ export const coffees = [
 		title: 'Cubano',
 		description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/cubano.png',
 		tags: [
-			'especial',
-			'alcoólico',
-			'gelado'
+			'ESPECIAL',
+			'ALCOÓLICO',
+			'GELADO'
 		]
 	},
 	{
@@ -123,9 +123,9 @@ export const coffees = [
 		title: 'Havaiano',
 		description: 'Bebida adocicada preparada com café e leite de coco',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/havaiano.png',
 		tags: [
-			'especial',
+			'ESPECIAL',
 		]
 	},
 	{
@@ -133,9 +133,9 @@ export const coffees = [
 		title: 'Árabe',
 		description: 'Bebida preparada com grãos de café árabe e especiarias',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/arabe.png',
 		tags: [
-			'especial',
+			'ESPECIAL',
 		]
 	},
 	{
@@ -143,10 +143,10 @@ export const coffees = [
 		title: 'Irlândes',
 		description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
 		amount: 9.90,
-		img: '#',
+		img: '../../public/irlandes.png',
 		tags: [
-			'especial',
-			'alcoólico'
+			'ESPECIAL',
+			'ALCOÓLICO'
 		]
 	},
 

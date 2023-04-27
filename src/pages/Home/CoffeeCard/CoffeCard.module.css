@@ -4,6 +4,7 @@
 
     background: var(--white-card);
     border-radius: 6px 36px;
+    margin-bottom: 1.5rem;
 }
 
 .coffeeCard img {
@@ -34,7 +35,7 @@
     align-items: center;
     padding: 4px 8px;
 
-    width: 3.875rem;
+    width: 4.6rem;
     height: 1.313rem;
 
     background: var(--yellow-light);
