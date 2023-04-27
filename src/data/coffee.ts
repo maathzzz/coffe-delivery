@@ -1,5 +1,27 @@
 export const coffees = [
 	{
+		id: 15,
+		title: 'Tóia Drink',
+		description: 'Bebida a base de café com leite, canela, chantilly e nutella.',
+		amount: 12.90,
+		img: '../../capuccino.png',
+		tags: [
+			'NOVIDADE',
+			'COM LEITE'
+		]
+	},
+	{
+		id: 15,
+		title: 'Pingu Coffee',
+		description: 'Bebida a base de café, chantilly, gelo e lascas de peixes na cobertura.',
+		amount: 24.90,
+		img: '../../irlandes.png',
+		tags: [
+			'NOVIDADE',
+			'GELO'
+		]
+	},
+	{
 		id: 1,
 		title: 'Expresso Tradicional',
 		description: 'O tradicional café feito com água quente e grãos moídos',
@@ -149,5 +171,4 @@ export const coffees = [
 			'ALCOÓLICO'
 		]
 	},
-
 ]

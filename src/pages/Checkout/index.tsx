@@ -1,7 +1,12 @@
+import styles from './Checkout.module.css'
+import { LocationForm } from './LocationForm'
+
 export function Checkout() {
     return (
-        <div>
-            <h1> Checkout </h1>
+        <div className={styles.checkout}>
+            <h2> Complete seu pedido </h2>
+            <LocationForm />
+
         </div>
     )
 }

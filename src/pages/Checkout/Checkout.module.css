@@ -1,0 +1,7 @@
+.checkout h2 {
+    font-family: 'Baloo 2';
+    color: var(--gray-subtitle);
+    position: absolute;
+    left: 10rem;
+    top: 9rem;
+}

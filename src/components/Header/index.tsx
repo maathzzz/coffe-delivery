@@ -12,10 +12,10 @@ export function Header() {
             <div className={styles.actions}>
                 <NavLink to='/sucess' className={styles['actions-local']}>
                     <MapPin color="#8047F8" weight="fill" size={16}/>
-                    {/* <span> Jaú </span>
+                    <span> Jaú </span>
                     <span> • </span>
-                    <span> SP</span> */}
-                    <span> Meu Pedido</span>
+                    <span> SP</span>
+                    {/* <span> Meu Pedido</span> */}
                 </NavLink>
                 <NavLink to="/checkout" className={styles['actions-cart']}> 
                     <ShoppingCartSimple color="#C47F17" weight="fill" size={22}/> 
