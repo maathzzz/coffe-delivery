@@ -1,5 +1,5 @@
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
-import driver from '../../assets/Illustration.svg'
+import driver from '../../assets/Illustration.png'
 import styles from './Sucess.module.css'
 
 export function Sucess() {
