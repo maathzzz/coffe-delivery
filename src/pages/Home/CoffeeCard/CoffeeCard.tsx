@@ -1,7 +1,7 @@
 import { ShoppingCartSimple } from '@phosphor-icons/react'
 import styles from './CoffeCard.module.css'
-import { useState } from 'react'
-
+import { useContext } from "react";
+import { CoffeesContext } from '../../../contexts/CoffeesContext'
 
 interface CoffeeAtributes {
   title: string
@@ -9,24 +9,13 @@ interface CoffeeAtributes {
   price: number
   tags: String[]
   imgUrl: string 
-
+  amount: number
 }
 
 
-export function CoffeeCard({ title, description, price, tags, imgUrl }: CoffeeAtributes) {
-  const [ coffeeCount, setCoffeeCount ] = useState(0)
+export function CoffeeCard({ title, description, price, tags, imgUrl, amount }: CoffeeAtributes) {
+  const { coffeeCount, handleAddCoffeeToCart, handleRemoveCoffeeFromCart } = useContext(CoffeesContext)
 
-  function handleAddCoffeeToCart() {
-    setCoffeeCount(coffeeCount + 1)
-  }
-
-  function handleRemoveCoffeeFromCart() {
-    if(coffeeCount != 0) {
-      setCoffeeCount(coffeeCount - 1)
-    } else {
-
-    }
-  }
 
   return (
     <div className={styles.coffeeCard}>

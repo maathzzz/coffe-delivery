@@ -43,9 +43,10 @@ export function Home() {
                                 <CoffeeCard
                                     title={coffee.title}
                                     description={coffee.description}
-                                    price={coffee.amount}
+                                    price={coffee.price}
                                     tags={coffee.tags} 
                                     imgUrl={coffee.img}
+                                    amount={coffee.amount}
                                 />
                             </div>
                         )

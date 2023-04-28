@@ -24,7 +24,7 @@ export function LocationForm() {
         complemento: data.complemento,
         bairro: data.bairro,
         localidade: data.localidade,
-        uf: data.uf
+        uf: data.uf 
       });
     } catch (error) {
       console.log(error);
