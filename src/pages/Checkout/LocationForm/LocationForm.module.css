@@ -1,4 +1,4 @@
-.locationForm {
+.locationContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -15,4 +15,138 @@
     position: absolute;
     left: 160px;
     top: 182px;
+}
+
+.locationTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: px;
+    gap: 0.5rem;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.locationTitle div p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 130%;
+    color: var(--gray-text);
+}
+
+.locationTitle div span {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 130%;
+    color: var(--gray-label);
+}
+
+.locationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1rem;
+
+    width: 35.563rem;
+    height: 13.5rem;
+}
+
+.inputOne {
+    width: 12.5rem;
+    height: 2.625rem;
+
+    background: var(--white-input);
+    border: 1px solid var(--gray-button);
+    border-radius: 6px;
+
+    text-align: start;
+}
+
+.inputTwo {
+    width: 35rem;
+    height: 2.625rem;
+
+    background: var(--white-input);
+    border: 1px solid var(--gray-button);
+    border-radius: 6px;
+
+    text-align: start;
+}
+
+.locationForm2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.75rem;
+}
+
+.inputThree {
+    width: 21.75rem;
+    height: 2.625rem;
+
+    background: var(--white-input);
+    border: 1px solid var(--gray-button);
+    border-radius: 6px;
+
+    text-align: start;
+}
+
+.inputFour {
+    width: 17.25rem;
+    height: 2.625rem;
+
+    background: var(--white-input);
+    border: 1px solid var(--gray-button);
+    border-radius: 6px;
+
+    text-align: start;
+}
+
+.inputFive {
+    width: 3.75rem;
+    height: 2.625rem;
+
+    background: var(--white-input);
+    border: 1px solid var(--gray-button);
+    border-radius: 6px;
+
+    text-align: start;
+}
+
+.locationForm3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 0.75rem;
+}
+
+.inputOne::placeholder {
+    padding-left: 5px; 
+    padding-right: 5px; 
+}
+
+.inputTwo::placeholder {
+    padding-left: 5px; 
+    padding-right: 5px; 
+}
+
+.inputThree::placeholder {
+    padding-left: 5px; 
+    padding-right: 5px; 
+}
+
+.inputFour::placeholder {
+    padding-left: 5px; 
+    padding-right: 5px; 
+}
+
+.inputFive::placeholder {
+    padding-left: 5px; 
+    padding-right: 5px; 
 }

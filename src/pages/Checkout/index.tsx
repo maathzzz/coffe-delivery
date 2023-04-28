@@ -1,5 +1,5 @@
 import styles from './Checkout.module.css'
-import { LocationForm } from './LocationForm'
+import { LocationForm } from './LocationForm/index'
 
 export function Checkout() {
     return (

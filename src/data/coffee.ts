@@ -1,6 +1,8 @@
+import uuid from "react-uuid"
+
 export const coffees = [
 	{
-		id: 15,
+		id: uuid(),
 		title: 'Tóia Drink',
 		description: 'Bebida a base de café com leite, canela, chantilly e nutella.',
 		amount: 12.90,
@@ -11,7 +13,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 15,
+		id: uuid(),
 		title: 'Pingu Coffee',
 		description: 'Bebida a base de café, chantilly, gelo e lascas de peixes na cobertura.',
 		amount: 24.90,
@@ -22,7 +24,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 1,
+		id: uuid(),
 		title: 'Expresso Tradicional',
 		description: 'O tradicional café feito com água quente e grãos moídos',
 		amount: 9.90,
@@ -32,7 +34,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 2,
+		id: uuid(),
 		title: 'Expresso Americano',
 		description: 'Expresso diluído, menos intenso que o tradicional',
 		amount: 9.90,
@@ -42,7 +44,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 3,
+		id: uuid(),
 		title: 'Expresso Cremoso',
 		description: 'Café expresso tradicional com espuma cremosa',
 		amount: 9.90,
@@ -52,7 +54,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 4,
+		id: uuid(),
 		title: 'Expresso Gelado',
 		description: 'Bebida preparada com café expresso e cubos de gelo',
 		amount: 9.90,
@@ -63,7 +65,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 5,
+		id: uuid(),
 		title: 'Café com Leite',
 		description: 'Meio a meio de expresso tradicional com leite vaporizado',
 		amount: 9.90,
@@ -74,7 +76,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 6,
+		id: uuid(),
 		title: 'Latte',
 		description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
 		amount: 9.90,
@@ -85,7 +87,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 7,
+		id: uuid(),
 		title: 'Capuccino',
 		description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
 		amount: 9.90,
@@ -96,7 +98,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 8,
+		id: uuid(),
 		title: 'Macchiato',
 		description: 'Café expresso misturado com um pouco de leite quente e espuma',
 		amount: 9.90,
@@ -107,7 +109,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 9,
+		id: uuid(),
 		title: 'Mocaccino',
 		description: 'Café expresso com calda de chocolate, pouco leite e espuma',
 		amount: 9.90,
@@ -118,7 +120,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 10,
+		id: uuid(),
 		title: 'Chocolate Quente',
 		description: 'Bebida feita com chocolate dissolvido no leite quente e café',
 		amount: 9.90,
@@ -129,7 +131,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 11,
+		id: uuid(),
 		title: 'Cubano',
 		description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
 		amount: 9.90,
@@ -141,7 +143,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 12,
+		id: uuid(),
 		title: 'Havaiano',
 		description: 'Bebida adocicada preparada com café e leite de coco',
 		amount: 9.90,
@@ -151,7 +153,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 13,
+		id: uuid(),
 		title: 'Árabe',
 		description: 'Bebida preparada com grãos de café árabe e especiarias',
 		amount: 9.90,
@@ -161,7 +163,7 @@ export const coffees = [
 		]
 	},
 	{
-		id: 14,
+		id: uuid(),
 		title: 'Irlândes',
 		description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
 		amount: 9.90,
