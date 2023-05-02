@@ -36,7 +36,7 @@ export function CoffeeCard({ title, description, price, tags, imgUrl, amount }: 
               <button className={styles.minus} onClick={handleRemoveCoffeeFromCart}>
                 -
               </button>
-              <span> {coffeeCount} </span>
+              <span> {amount} </span>
               <button className={styles.plus} onClick={handleAddCoffeeToCart}>
                 +
               </button>

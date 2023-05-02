@@ -1,81 +1,120 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { MapPinLine } from '@phosphor-icons/react';
 import styles from './LocationForm.module.css';
 
 export function LocationForm() {
-  const [endereco, setEndereco] = useState({
-    cep: '',
-    logradouro: '',
-    complemento: '',
-    bairro: '',
-    localidade: '',
-    uf: ''
+  const [cep, setCep] = useState('');
+  const [address, setAddress] = useState({
+    street: '',
+    number: '',
+    complement: '',
+    neighborhood: '',
+    city: '',
+    state: ''
   });
 
-  const buscarEndereco = async (cep : any) => {
-    try {
-      const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      const { data } = response;
-
-      setEndereco({
-        cep: data.cep,
-        logradouro: data.logradouro,
-        complemento: data.complemento,
-        bairro: data.bairro,
-        localidade: data.localidade,
-        uf: data.uf 
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  const handleCepChange = (event : any) => {
-    const cep = event.target.value;
-    setEndereco({ ...endereco, cep });
-  }
-
-  const handleCepBlur = (event : any) => {
-    const cep = event.target.value.replace(/\D/g, '');
-    if (cep.length === 8) {
-      buscarEndereco(cep);
+  async function handleBlur() {
+    if (!cep) {
+      return;
     }
 
-    else if (cep.length === 0) {
-        setEndereco({
-            cep: '',
-            logradouro: '',
-            complemento: '',
-            bairro: '',
-            localidade: '',
-            uf: ''
-          });
-      }
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const data = await response.json();
+
+    setAddress({
+      street: data.logradouro || '',
+      number: '',
+      complement: data.complemento || '',
+      neighborhood: data.bairro || '',
+      city: data.localidade || '',
+      state: data.uf || ''
+    });
+  }
+
+  function handleChange(event: any) {
+    const { name, value } = event.target;
+
+    setAddress(prevAddress => ({
+      ...prevAddress,
+      [name]: value
+    }));
   }
 
   return (
     <div className={styles.locationContainer}>
       <div className={styles.locationTitle}>
-        <MapPinLine color='#C47F17' size={22} />
+        <MapPinLine color="#C47F17" size={22} />
         <div>
-          <p>Endereço de Entrega</p>
-          <span>Informe o endereço onde deseja receber seu pedido</span>
+          <p> Endereço de Entrega </p>
+          <span> Informe o endereço onde deseja receber seu pedido </span>
         </div>
       </div>
 
       <form className={styles.locationForm}>
-        <input type='text' placeholder='CEP' className={styles.inputOne} value={endereco.cep} onChange={handleCepChange} onBlur={handleCepBlur} />
-        <input type='text' placeholder='Rua' className={styles.inputTwo} value={endereco.logradouro} />
+      <div className={styles.locationCep}>
+        <input
+          type="text"
+          placeholder="CEP"
+          value={cep}
+          onChange={event => setCep(event.target.value)}
+          onBlur={handleBlur}
+          className={styles.inputOne}
+        />
+      </div>
+
+        <input
+          type="text"
+          placeholder="Rua"
+          name="street"
+          value={address.street}
+          onChange={handleChange}
+          className={styles.inputTwo}
+        />
 
         <div className={styles.locationForm2}>
-          <input type='text' placeholder='Número' className={styles.inputOne} />
-          <input type='text' placeholder='Complemento (Opcional)' className={styles.inputThree} />
+          <input
+            type="number"
+            placeholder="Número"
+            name="number"
+            value={address.number}
+            onChange={handleChange}
+            className={styles.inputOne}
+          />
+          <input
+            type="text"
+            placeholder="Complemento (Opcional)"
+            name="complement"
+            value={address.complement}
+            onChange={handleChange}
+            className={styles.inputThree}
+          />
         </div>
+
         <div className={styles.locationForm3}>
-          <input type='text' placeholder='Bairro' className={styles.inputOne} value={endereco.bairro} />
-          <input type='text' placeholder='Cidade' className={styles.inputFour} value={endereco.localidade} />
-          <input type='text' placeholder='UF' className={styles.inputFive} value={endereco.uf} />
+          <input
+            type="text"
+            placeholder="Bairro"
+            name="neighborhood"
+            value={address.neighborhood}
+            onChange={handleChange}
+            className={styles.inputOne}
+          />
+          <input
+            type="text"
+            placeholder="Cidade"
+            name="city"
+            value={address.city}
+            onChange={handleChange}
+            className={styles.inputFour}
+          />
+          <input
+            type="text"
+            placeholder="UF"
+            name="state"
+            value={address.state}
+            onChange={handleChange}
+            className={styles.inputFive}
+          />
         </div>
       </form>
     </div>
