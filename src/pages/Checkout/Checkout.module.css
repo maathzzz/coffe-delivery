@@ -1,7 +1,25 @@
+.checkout {
+    height: 63.313rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .checkout h2 {
     font-family: 'Baloo 2';
     color: var(--gray-subtitle);
     position: absolute;
     left: 10rem;
     top: 8.5rem;
+    width: 20rem;
+}
+
+.checkout h3 {
+    font-family: 'Baloo 2';
+    font-size: 1.5rem;
+    color: var(--gray-subtitle);
+    position: absolute;
+    left: 52.5rem;
+    top: 8.5rem;
+    width: 20rem;
 }

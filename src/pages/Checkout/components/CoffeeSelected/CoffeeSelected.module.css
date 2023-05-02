@@ -1,0 +1,27 @@
+.coffeeSelected {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 4px;
+    gap: 3.688rem;
+
+    width: 368px;
+    height: 80px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 1.25rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 1rem;
+}
