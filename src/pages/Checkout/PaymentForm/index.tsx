@@ -1,10 +1,8 @@
 import { Bank, CreditCard, CurrencyDollar, Money } from '@phosphor-icons/react'
 import styles from './PaymentForm.module.css'
-import { useState } from 'react'
 
 
 export function PaymentForm() {
-    const [inputRadioIsChecked, setInputRadioIsChecked] = useState('');
 
   return (
     <div className={styles.container}>

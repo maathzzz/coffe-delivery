@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import { coffees } from '../data/coffee'
+// import { coffees } from '../data/coffee'
 
 export interface CoffeeAtributes {
     title: string

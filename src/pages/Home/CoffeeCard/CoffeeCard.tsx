@@ -14,7 +14,7 @@ interface CoffeeAtributes {
 
 
 export function CoffeeCard({ title, description, price, tags, imgUrl, amount }: CoffeeAtributes) {
-  const { coffeeCount, handleAddCoffeeToCart, handleRemoveCoffeeFromCart } = useContext(CoffeesContext)
+  const { handleAddCoffeeToCart, handleRemoveCoffeeFromCart } = useContext(CoffeesContext)
 
 
   return (
