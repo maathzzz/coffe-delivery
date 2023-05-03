@@ -1,9 +1,9 @@
 import { ShoppingCartSimple } from '@phosphor-icons/react'
 import styles from './CoffeCard.module.css'
-import { useContext } from "react";
-import { CoffeesContext } from '../../../contexts/CoffeesContext'
+import { useCoffeeCart } from '../../../contexts/CoffeesContext'
 
 interface CoffeeAtributes {
+  id: string
   title: string
   description: string
   price: number
@@ -13,9 +13,19 @@ interface CoffeeAtributes {
 }
 
 
-export function CoffeeCard({ title, description, price, tags, imgUrl, amount }: CoffeeAtributes) {
-  const { handleAddCoffeeToCart, handleRemoveCoffeeFromCart } = useContext(CoffeesContext)
+export function CoffeeCard({ id, title, description, price, tags, imgUrl, amount }: CoffeeAtributes) {
 
+  const coffee = {
+    id, 
+    title, 
+    description, 
+    price, 
+    tags, 
+    imgUrl, 
+    amount
+  }
+
+  const { handleAddCoffeeToCart, addCoffeeUnit } = useCoffeeCart()
 
   return (
     <div className={styles.coffeeCard}>
@@ -33,15 +43,15 @@ export function CoffeeCard({ title, description, price, tags, imgUrl, amount }: 
           <span className={styles.price}>R$ {price} </span>
           <div className={styles.actions}>
             <div className={styles.counter}>
-              <button className={styles.minus} onClick={handleRemoveCoffeeFromCart}>
+              <button className={styles.minus}>
                 -
               </button>
               <span> {amount} </span>
-              <button className={styles.plus} onClick={handleAddCoffeeToCart}>
+              <button className={styles.plus} onClick={() => addCoffeeUnit(amount)}>
                 +
               </button>
             </div>
-            <button className={styles.cart}>
+            <button className={styles.cart} onClick={() => handleAddCoffeeToCart(coffee)}>
               <ShoppingCartSimple weight='fill' color='#FFFF'/>
             </button>
           </div>

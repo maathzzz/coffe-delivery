@@ -13,3 +13,11 @@
     background: var(--white-card);
     border-radius: 6px 44px;
 }
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+}

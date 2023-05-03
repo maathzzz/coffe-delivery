@@ -11,7 +11,6 @@ export function Checkout() {
             <PaymentForm />
             <h3> Cafés selecionados:</h3>
             <CartContainer />
-
         </div>
     )
 }

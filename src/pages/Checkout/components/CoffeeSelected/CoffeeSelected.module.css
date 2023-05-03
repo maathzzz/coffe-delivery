@@ -6,8 +6,8 @@
     padding: 8px 4px;
     gap: 3.688rem;
 
-    width: 368px;
-    height: 80px;
+    width: 23rem;
+    height: 5rem;
 }
 
 .info {
@@ -18,10 +18,118 @@
     gap: 1.25rem;
 }
 
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0.5rem;
+}
+
+.details span {
+    font-weight: 400;
+    color: var(--gray-subtitle);
+}
+
 .actions {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 1rem;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 6px;
+    gap: 0.5rem;
+
+    background: var(--gray-button);
+}
+
+.minus {
+    line-height: 2;
+    font-size: 1.5rem;
+    text-align: center;
+    background: none;
+    border: none;
+
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.minus:hover {
+    color: var(--purple-dark); 
+}
+
+.counter span {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 130%;
+
+    text-align: center;
+    color: var(--black-title);
+}
+
+.plus {
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.plus:hover {
+    color: var(--purple-dark); 
+}
+
+.remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 6px;
+    gap: 0.25rem;
+    border: none;
+
+    background: var(--gray-button);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.price {
+    width: 10rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 130%;
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: var(--gray-text);
+}
+
+.divider {
+    display: flex;
+    justify-content: column;
+    width: 23rem;
+    height: 0;
+    border: 1px solid #E6E5E5;
 }

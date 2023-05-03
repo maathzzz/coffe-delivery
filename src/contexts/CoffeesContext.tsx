@@ -1,52 +1,59 @@
-import { ReactNode, createContext, useState } from "react";
-// import { coffees } from '../data/coffee'
+import { useContext } from "react";
+import { useState } from "react";
+import { ReactNode, createContext } from "react";
 
-export interface CoffeeAtributes {
+export interface CoffeeProps {
+    id: string
     title: string
     description: string
     price: number
     tags: String[]
     imgUrl: string 
     amount: number
-}  
+} 
 
 interface CoffeesContextType {
-    coffeeCount: number,
-    handleAddCoffeeToCart: () => void
-    handleRemoveCoffeeFromCart: () => void
+    coffeeCartItems: CoffeeProps[]
+    handleAddCoffeeToCart: (coffee: CoffeeProps) => void
+    addCoffeeUnit: (amount: number) => void
+    // handleRemoveCoffeeFromCart?: () => void
 }
+
+const CoffeeCartContext = createContext<CoffeesContextType>({
+    coffeeCartItems: [],
+    handleAddCoffeeToCart: () => {},
+    addCoffeeUnit: () => {}
+});
+
+export const useCoffeeCart = () => useContext(CoffeeCartContext);
 
 export const CoffeesContext = createContext({} as CoffeesContextType)
 
 interface CoffeesContextProviderProps {
     children: ReactNode
-  }
+}
 
 export function CoffeesContextProvider({ children }: CoffeesContextProviderProps) {
-    const [ coffeeCount, setCoffeeCount ] = useState(0)
+    const [coffeeCartItems, setCoffeeCartItems] = useState<CoffeeProps[]>([]);
 
-    function handleAddCoffeeToCart() {
-        setCoffeeCount(coffeeCount + 1)
+    const handleAddCoffeeToCart = (coffee: CoffeeProps) => {
+        setCoffeeCartItems([...coffeeCartItems, coffee])
+        console.log("adicionando")
     }
 
-    function handleRemoveCoffeeFromCart() {
-        if(coffeeCount != 0) {
-        setCoffeeCount(coffeeCount - 1)
-        } else {
-
-        }
+    const addCoffeeUnit = (amount: number) => {
+        amount++
     }
 
     return(
         <CoffeesContext.Provider
             value={{
-                coffeeCount,
+                coffeeCartItems,
                 handleAddCoffeeToCart,
-                handleRemoveCoffeeFromCart
+                addCoffeeUnit,
             }}
         >
             { children }
         </CoffeesContext.Provider>
     )
 }
-
