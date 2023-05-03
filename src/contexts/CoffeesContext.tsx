@@ -41,8 +41,8 @@ export function CoffeesContextProvider({ children }: CoffeesContextProviderProps
         console.log("adicionando")
     }
 
-    const addCoffeeUnit = (amount: number) => {
-        amount++
+    const addCoffeeUnit = () => {
+        console.log("oi")
     }
 
     return(
