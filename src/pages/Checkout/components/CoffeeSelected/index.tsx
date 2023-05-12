@@ -2,19 +2,18 @@ import styles from './CoffeeSelected.module.css'
 import { Trash } from '@phosphor-icons/react'
 
 interface CoffeeAtributes {
-    id: string
-    title: string
-    price: number
-    imgUrl: string 
-    amount?: number
+    id?: string
+    title?: string
+    price?: number
+    img?: string 
 }
 
-export function CoffeeSelected({ imgUrl, title, price }: CoffeeAtributes) {
+export function CoffeeSelected({ img, title, price }: CoffeeAtributes) {
   return (
     <>
         <div className={styles.coffeeSelected}>
             <div className={styles.info}>
-                <img src={imgUrl} width={64}/>
+                <img src={img} width={64}/>
                 <div className={styles.details}>
                     <span> {title} </span>
                     <div className={styles.actions}>

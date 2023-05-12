@@ -20,4 +20,20 @@
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
+
+    gap: 0.275rem;
+    width: 23rem;
+    height: 5.75rem;
+}
+
+.rowContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 0.5rem;
+
+    width: 23rem;
+    height: 1.313rem;
 }

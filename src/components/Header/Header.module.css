@@ -45,12 +45,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
 
     transition: 200ms;
 }
 
 .actions-cart:hover {
-    background: var(--yellow);
-
-    
+    background: var(--yellow);    
 }

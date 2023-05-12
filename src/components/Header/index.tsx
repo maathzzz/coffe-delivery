@@ -17,8 +17,10 @@ export function Header() {
                     <span> SP</span>
                     {/* <span> Meu Pedido</span> */}
                 </NavLink>
-                <NavLink to="/checkout" className={styles['actions-cart']}> 
-                    <ShoppingCartSimple color="#C47F17" weight="fill" size={22}/> 
+                <NavLink to="/checkout">
+                    <button className={styles['actions-cart']}>
+                            <ShoppingCartSimple color="#C47F17" weight="fill" size={22}/> 
+                    </button>
                 </NavLink>
             </div>
         </header>
