@@ -39,16 +39,10 @@ export function Home() {
                 <div className={styles.list}>
                     {coffees.map(coffee => {
                         return (
-                            <div key={coffee.id}> 
-                                <CoffeeCard
-                                    title={coffee.title}
-                                    description={coffee.description}
-                                    price={coffee.price}
-                                    tags={coffee.tags} 
-                                    imgUrl={coffee.img}
-                                    amount={coffee.amount}
-                                />
-                            </div>
+                            <CoffeeCard
+                                key={coffee.id}
+                                coffee={coffee}
+                            />
                         )
                     })}
                 </div>
