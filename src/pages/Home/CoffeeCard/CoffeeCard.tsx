@@ -39,7 +39,6 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
   }
 
   return (
-    // `../../../../public/${coffee.img}`
     <div className={styles.coffeeCard}>
         <img src={coffee.img}/> 
         <div className={styles.coffeeTags}>
