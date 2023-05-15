@@ -14,7 +14,7 @@ export function Home() {
     const { addCoffeeToCart } = useCart();
 
     const notify = () => {
-        toast.success('☕ Café adicionado', {
+        toast.success('☕ Café adicionado ao carrinho', {
             position: "bottom-right",
             autoClose: 1000,
             hideProgressBar: true,

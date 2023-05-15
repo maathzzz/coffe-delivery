@@ -9,10 +9,10 @@ import { useCart } from '../../hooks/useCart';
 
 export function Checkout() {
     const [isFirstRender, setIsFirstRender] = useState(true)
-    const { removeCartItem } = useCart();
+    const { cartQuantity } = useCart();
 
     const notify = () => {
-        toast.error('☕ Café removido', {
+        toast.error('☕ Café removido do carrinho', {
             position: "bottom-right",
             autoClose: 1000,
             hideProgressBar: true,
@@ -28,7 +28,7 @@ export function Checkout() {
           } else {
             notify()
           }
-    }, [removeCartItem])
+    }, [cartQuantity])
     
     return (
         <div className={styles.checkout}>
