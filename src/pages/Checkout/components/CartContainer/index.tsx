@@ -1,14 +1,15 @@
+import { useCart } from '../../../../hooks/useCart';
 import { CoffeeSelected } from '../CoffeeSelected'
 import styles from './CartContainer.module.css'
-// import { CoffeeProps } from '../../../../contexts/CoffeesContext'
 
 
 export function CartContainer() {
+  const { cartItems } = useCart();
   return (
     <div className={styles.cartContainer}>
-        <CoffeeSelected />
-        <CoffeeSelected />
-        <CoffeeSelected />
+        {cartItems.map((item) =>(
+          <CoffeeSelected key={item.id} coffee={item} />
+        ))}
       <div className={styles.frame}>
         <div className={styles.rowContent}>
           <p> Total de itens </p>
@@ -19,10 +20,12 @@ export function CartContainer() {
           <span> R$ 3,50 </span>
         </div>
         <div className={styles.rowContent}>
-          <p> Total</p>
-          <span> R$ 33,20 </span>
+          <h4 className={styles.total}> Total</h4>
+          <h4 className={styles.total}> R$ 33,20 </h4>
         </div>
       </div>
+
+      <button className={styles.confirmOrder}> confirmar pedido </button>
     </div>
   )
 }

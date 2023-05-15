@@ -6,10 +6,12 @@
     gap: 1.5rem;
 
     width: 28rem;
+    height: auto;
 
-    position: absolute;
+    /* position: absolute;
     left: 52rem;
-    top: 11.375rem;
+    top: 11.375rem; */
+
     background: var(--white-card);
     border-radius: 6px 44px;
 }
@@ -36,4 +38,39 @@
 
     width: 23rem;
     height: 1.313rem;
+}
+
+.rowContent p {
+    color: var(--gray-text);
+    font-size: 0.875rem;
+}
+
+.rowContent span {
+    color: var(--gray-text)
+}
+
+.total {
+    color: var(--gray-subtitle);
+    font-size: 1.25rem;
+}
+
+.confirmOrder {
+    width: 23rem;
+    height: 2.875rem;
+
+    background: var(--yellow-gold);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-stretch: 100;
+
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: 200ms;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.confirmOrder:hover {
+    background: var(--yellow-dark);
 }

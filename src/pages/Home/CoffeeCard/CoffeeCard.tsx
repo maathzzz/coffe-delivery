@@ -39,8 +39,9 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
   }
 
   return (
+    // `../../../../public/${coffee.img}`
     <div className={styles.coffeeCard}>
-        <img src={`../../../../public/${coffee.img}`}/> 
+        <img src={coffee.img}/> 
         <div className={styles.coffeeTags}>
           {coffee.tags.map(tag => {
             return (
@@ -51,7 +52,7 @@ export function CoffeeCard({ coffee }: CoffeeProps) {
         <h1 className={styles.coffeeName}> {coffee.title} </h1>
         <p className={styles.coffeeDescription}> {coffee.description} </p>
         <div className={styles.buy}>
-          <span className={styles.price}>R$ {coffee.price} </span>
+          <span className={styles.price}> { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'BRL' }).format(coffee.price) } </span>
           <div className={styles.actions}>
             <div className={styles.counter}>
               <button className={styles.minus} disabled={quantity <= 1} onClick={handleDecrease}>

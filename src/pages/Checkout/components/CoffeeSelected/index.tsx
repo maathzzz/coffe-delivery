@@ -1,28 +1,37 @@
+import { CartItem } from '../../../../contexts/CoffeesContext'
+import { useCart } from '../../../../hooks/useCart';
 import styles from './CoffeeSelected.module.css'
 import { Trash } from '@phosphor-icons/react'
-
-interface CoffeeAtributes {
-    id?: string
-    title?: string
-    price?: number
-    img?: string 
+interface CoffeeCardCartProps {
+    coffee: CartItem
 }
 
-export function CoffeeSelected({ img, title, price }: CoffeeAtributes) {
+export function CoffeeSelected({ coffee }: CoffeeCardCartProps) {
+    const { changeCartItemQuantity } = useCart();
+    const coffeeTotal = coffee.price * coffee.quantity
+
+    function handleIncrease(){
+        changeCartItemQuantity(coffee.id, "increase")
+    }
+
+    function handleDecrease(){
+        changeCartItemQuantity(coffee.id, "decrease")
+    }
+
   return (
     <>
         <div className={styles.coffeeSelected}>
             <div className={styles.info}>
-                <img src={img} width={64}/>
+                <img src={coffee.img} width={64}/>
                 <div className={styles.details}>
-                    <span> {title} </span>
+                    <span> {coffee.title} </span>
                     <div className={styles.actions}>
                         <div className={styles.counter}>
-                            <button className={styles.minus}>
+                            <button className={styles.minus} onClick={handleDecrease}>
                                 -
                             </button>
-                            <span> 1 </span>
-                            <button className={styles.plus}>
+                            <span> {coffee.quantity} </span>
+                            <button className={styles.plus} onClick={handleIncrease}>
                                 +
                             </button>
                         </div>
@@ -32,7 +41,7 @@ export function CoffeeSelected({ img, title, price }: CoffeeAtributes) {
                     </div>
                 </div>
             </div>
-            <span className={styles.price}> {price} </span>
+            <span className={styles.price}> { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'BRL' }).format(coffeeTotal) } </span>
         </div>
         <div className={styles.divider}></div>
     </>

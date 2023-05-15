@@ -5,9 +5,14 @@
     background: var(--white-card);
     border-radius: 6px;
 
-    position: absolute;
+    /* position: absolute;
     left: 10rem;
-    top: 35.75rem;
+    top: 35.75rem; */
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
 }
 
 .paymentTitle {
