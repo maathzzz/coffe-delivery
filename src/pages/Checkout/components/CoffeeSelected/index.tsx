@@ -31,11 +31,11 @@ export function CoffeeSelected({ coffee }: CoffeeCardCartProps) {
                     <span> {coffee.title} </span>
                     <div className={styles.actions}>
                         <div className={styles.counter}>
-                            <button className={styles.minus} onClick={handleDecrease}>
+                            <button className={styles.minus} disabled={coffee.quantity <= 1} onClick={handleDecrease}>
                                 -
                             </button>
                             <span> {coffee.quantity} </span>
-                            <button className={styles.plus} onClick={handleIncrease}>
+                            <button className={styles.plus}  onClick={handleIncrease}>
                                 +
                             </button>
                         </div>

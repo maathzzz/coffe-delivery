@@ -3,6 +3,18 @@ import uuid from "react-uuid"
 export const coffees = [
 	{
 		id: uuid(),
+		title: 'El Negueba Drink',
+		description: 'Bebida a base de café.',
+		price: 29.99,
+		amount: 0,
+		img: '../../americano.png',
+		tags: [
+			'NOVIDADE',
+			'COM LEITE'
+		]
+	},
+	{
+		id: uuid(),
 		title: 'Tóia Drink',
 		description: 'Bebida a base de café com leite, canela, chantilly e nutella.',
 		price: 12.90,
