@@ -53,3 +53,21 @@
 .actions-cart:hover {
     background: var(--yellow);    
 }
+
+.actions-cart span {
+    position: absolute;
+    top: calc(2.75rem / 2);
+    right: calc(18.75rem / 2);
+    
+
+    background: var(--yellow-dark);
+    color: white;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 999px;
+}

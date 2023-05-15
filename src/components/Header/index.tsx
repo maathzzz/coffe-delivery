@@ -2,8 +2,11 @@ import CoffeDeliveryLogo from '../../assets/coffeDeliveryLogo.svg'
 import { ShoppingCartSimple, MapPin } from "@phosphor-icons/react";
 import styles from './Header.module.css'
 import { NavLink } from 'react-router-dom';
+import { useCart } from '../../hooks/useCart';
+
 
 export function Header() {
+    const { cartQuantity } = useCart();
     return (
         <header className={styles.header}>
             <NavLink to="/">
@@ -19,6 +22,7 @@ export function Header() {
                 </NavLink>
                 <NavLink to="/checkout">
                     <button className={styles['actions-cart']}>
+                            <span> {cartQuantity} </span>
                             <ShoppingCartSimple color="#C47F17" weight="fill" size={22}/> 
                     </button>
                 </NavLink>
