@@ -1,8 +1,8 @@
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import driver from '../../assets/Illustration.png'
-import styles from './Sucess.module.css'
+import styles from './Success.module.css'
 
-export function Sucess() {
+export function Success() {
     return (
         <div className={styles.sucess}>
             <div className={styles.title}>

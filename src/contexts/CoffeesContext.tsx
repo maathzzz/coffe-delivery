@@ -30,7 +30,6 @@ interface CartContextType {
 
 export const CartContext = createContext({} as CartContextType)
   
-
 interface CoffeesContextProviderProps {
     children: ReactNode
 }

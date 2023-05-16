@@ -5,7 +5,7 @@ import styles from './PaymentForm.module.css'
 export function PaymentForm() {
 
   return (
-    <div className={styles.container}>
+    <form className={styles.container}>
       <div className={styles.child}>
         <div className={styles.paymentTitle}>
               <CurrencyDollar size={24} color="#8047F8"/>
@@ -14,7 +14,7 @@ export function PaymentForm() {
                   <span> O pagamento é feito na entrega. Escolha a forma que deseja pagar </span>
               </div>
           </div>
-          <form className={styles.paymentMethods}>
+          <div className={styles.paymentMethods}>
             <div className={styles.creditCard}>
                   <CreditCard size={20} color="#8047F8"/>
                   <span> CARTÃO DE CRÉDITO</span>
@@ -27,8 +27,8 @@ export function PaymentForm() {
                   <Money size={20} color="#8047F8"/>
                   <span> DINHEIRO </span>
             </div>
-          </form>
+          </div>
       </div>
-    </div>
+    </form>
   )
 }

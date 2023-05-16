@@ -40,7 +40,7 @@ export function CoffeeSelected({ coffee }: CoffeeCardCartProps) {
                             </button>
                         </div>
                         <button className={styles.remove} onClick={handleRemove}>
-                            <Trash color='#8047F8'/> REMOVER
+                            <Trash color='#8047F8' weight='fill' size={16}/> REMOVER
                         </button>
                     </div>
                 </div>
