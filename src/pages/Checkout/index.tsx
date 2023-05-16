@@ -22,6 +22,8 @@ export function Checkout() {
         resolver: zodResolver(confirmOrderValidationSchema),
     })
 
+    // const { handleSubmit } = confirmOrderForm;
+
     const notify = () => {
         toast.error('☕ Café removido do carrinho', {
             position: "bottom-right",
@@ -48,7 +50,7 @@ export function Checkout() {
                 <div className={styles.child}>
                     <div className={styles.block}>
                         <h2> Complete seu pedido </h2>
-                        <LocationForm />
+                        <LocationForm/>
                         <PaymentForm />
                     </div>
                     <div className={styles.block}>

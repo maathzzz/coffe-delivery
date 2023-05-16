@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { MapPinLine } from '@phosphor-icons/react';
 import styles from './LocationForm.module.css';
+import { useFormContext } from 'react-hook-form';
 
 export function LocationForm() {
+  const { register } = useFormContext();
+
   const [cep, setCep] = useState('');
   const [address, setAddress] = useState({
     street: '',
@@ -41,7 +44,7 @@ export function LocationForm() {
   }
 
   return (
-    <div className={styles.locationContainer}>
+    <form className={styles.locationContainer}>
       <div className={styles.locationTitle}>
         <MapPinLine color="#C47F17" size={22} />
         <div>
@@ -50,17 +53,18 @@ export function LocationForm() {
         </div>
       </div>
 
-      <form className={styles.locationForm}>
-      <div className={styles.locationCep}>
-        <input
-          type="text"
-          placeholder="CEP"
-          value={cep}
-          onChange={event => setCep(event.target.value)}
-          onBlur={handleBlur}
-          className={styles.inputOne}
-        />
-      </div>
+      <div className={styles.locationForm}>
+        <div className={styles.locationCep}>
+          <input
+            type="text"
+            placeholder="CEP"
+            value={cep}
+            {...register('cep')}
+            onChange={event => setCep(event.target.value)}
+            onBlur={handleBlur}
+            className={styles.inputOne}
+          />
+        </div>
 
         <input
           type="text"
@@ -116,7 +120,7 @@ export function LocationForm() {
             className={styles.inputFive}
           />
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }

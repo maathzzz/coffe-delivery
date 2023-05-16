@@ -32,7 +32,7 @@ export function CartContainer() {
         </div>
       </div>
 
-      <button className={styles.confirmOrder} disabled={cartQuantity <= 0}> confirmar pedido </button>
+      <button className={styles.confirmOrder} disabled={cartQuantity <= 0} type='submit'> confirmar pedido </button>
     </div>
   )
 }
